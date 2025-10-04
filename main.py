@@ -1,5 +1,8 @@
 import os
 import sys
+import warnings
+
+from numba.core.errors import NumbaTypeSafetyWarning
 
 from structures import *
 
@@ -52,4 +55,5 @@ def main(player, clock, world_map, drawing, trigo_cache):
 
 
 if __name__ == "__main__":
+    warnings.filterwarnings("ignore", category=NumbaTypeSafetyWarning)
     main(*init())

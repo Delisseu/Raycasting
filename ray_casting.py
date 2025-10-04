@@ -1,5 +1,7 @@
 import numba
-
+from numba.core.errors import NumbaTypeSafetyWarning
+import warnings
+warnings.filterwarnings("ignore", category=NumbaTypeSafetyWarning)
 from constant import *
 
 
